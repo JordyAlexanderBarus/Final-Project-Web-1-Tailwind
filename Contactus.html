@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="https://enesis.com/wp-content/uploads/favicon.png" type="image/x-icon">
+    <title>Enesis Group</title>
+</head>
+
+<body>
+    <header>
+        <nav class="bg-gray-100">
+            <div class="container flex items-center justify-between px-2 py-4 mx-auto">
+                <a href="#" class="flex-shrink-0">
+                    <img src="Bahan/logo.svg" alt="Logo" width="200">
+                </a>
+                <button class="block lg:hidden focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+                <div class="hidden lg:flex lg:flex-grow lg:items-center lg:w-auto lg:space-x-4">
+                    <ul class="flex flex-col lg:flex-row lg:items-center lg:space-x-4 lg:space-y-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">
+                                <img src="Bahan/icons8-home-50.png" alt="Home">
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="biodata.html">
+                                <img src="Bahan/icons8-cv-50.png" alt="Biodata">
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Contactus.html">
+                                <img src="Bahan/icons8-contact-50.png" alt="Contact">
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Sosmed.html">
+                                <img src="Bahan/icons8-social-50.png" alt="Social">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <main class="bg-gray-100 ">
+        <h1 class="mt-8 mb-6 text-3xl text-center">HUBUNGI KAMI</h1>
+
+        <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post"
+            class="max-w-md p-8 mx-auto mb-4 bg-white rounded shadow-md">
+
+            <div class="mb-4">
+                <label class="block mb-2 text-sm font-bold text-gray-700" for="fname">Full Name</label>
+                <input
+                    class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                    id="fname" type="text" placeholder="Full Name" name="fname">
+            </div>
+
+            <div class="mb-4">
+                <label class="block mb-2 text-sm font-bold text-gray-700" for="email">E-mail</label>
+                <input
+                    class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                    id="email" type="email" placeholder="E-mail" name="email">
+            </div>
+
+            <div class="mb-4">
+                <label class="block mb-2 text-sm font-bold text-gray-700" for="username">Username</label>
+                <input
+                    class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                    id="username" type="text" placeholder="Username" name="username">
+            </div>
+
+            <div class="relative mb-4">
+                <label class="block mb-2 text-sm font-bold text-gray-700" for="password">Password</label>
+                <input
+                    class="w-full px-3 py-2 pr-10 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                    id="password" type="password" placeholder="Password" name="password">
+                <span class="absolute cursor-pointer top-9 right-2" onclick="togglePassword()">👁️</span>
+            </div>
+
+
+            <div class="mb-4">
+                <p class="mb-2 text-sm font-bold text-gray-700">Gender</p>
+                <div>
+                    <input class="mr-2 leading-tight" type="radio" name="gender" id="male" value="male">
+                    <label class="text-sm text-gray-700" for="male">Pria</label><br>
+                    <input class="mr-2 leading-tight" type="radio" name="gender" id="female" value="female">
+                    <label class="text-sm text-gray-700" for="female">Perempuan</label>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <label class="block mb-2 text-sm font-bold text-gray-700" for="religion">Religion</label>
+                <select
+                    class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                    name="religion" id="religion">
+                    <option value="">Select Religion</option>
+                    <option value="christianity">Kristen</option>
+                    <option value="islam">Islam</option>
+                    <option value="hinduism">Hindu</option>
+                    <option value="buddhism">Buddha</option>
+                    <option value="others">Lainnya</option>
+                </select>
+            </div>
+
+            <div class="mb-4">
+                <label class="block mb-2 text-sm font-bold text-gray-700" for="address">Address</label>
+                <textarea
+                    class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                    name="address" id="address" rows="4" cols="50"></textarea>
+            </div>
+
+            <div class="mb-4">
+                <p class="mb-2 text-sm font-bold text-gray-700">Hobbies</p>
+                <div>
+                    <input class="mr-2 leading-tight" type="checkbox" name="hobbies" id="reading" value="reading">
+                    <label class="mr-6 text-sm text-gray-700" for="reading">Membaca</label>
+                    <input class="mr-2 leading-tight" type="checkbox" name="hobbies" id="sports" value="sports">
+                    <label class="text-sm text-gray-700" for="sports">Olahraga</label>
+                </div>
+            </div>
+
+            <div class="flex justify-end">
+                <input
+                    class="px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline"
+                    type="submit" value="Submit">
+            </div>
+        </form>
+
+    </main>
+
+
+    <footer class="mt-10 bg-yellow-50">
+        <div class="container flex ">
+            <div class="w-[80px] ml-20">
+                <img src="Bahan/logo_footer.svg" alt="Batuk" class="mt-10">
+            </div>
+
+
+            <div class="mt-10 ml-16">
+                <div class="grid grid-cols-3 gap-10">
+                    <div>
+                        <div class="text-left">
+                            <h2 class="mb-2 text-lg font-bold">SITEMAP</h2>
+                            <ul class="text-xs list-none">
+                                <li><a href="#">Beranda</a></li>
+                                <li><a href="#">Tentang Kami</a></li>
+                                <li><a href="#">Pasar Internasional</a></li>
+                                <li><a href="#">Hubungi Kami</a></li>
+                                <li><a href="#">Karir</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col justify-center">
+                        <h2 class="mb-2 text-lg font-bold">Brands</h2>
+                        <div class="grid grid-cols-2 gap-2 text-xs">
+                            <ul>
+                                <li><a href="#">Adem Sari</a></li>
+                                <li><a href="#">Amunizer</a></li>
+                                <li><a href="#">Antis</a></li>
+                                <li><a href="#">Force Magic</a></li>
+                                <li><a href="#">Kispray</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#">Plossa</a></li>
+                                <li><a href="#">Scrubber</a></li>
+                                <li><a href="#">Soffell</a></li>
+                                <li><a href="#">Vegeta Herbal</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col items-center">
+                        <h2 class="mb-2 text-lg font-bold">Follow Us On</h2>
+                        <div class="flex w-[120px]">
+                            <a href="#" class="mr-1">
+                                <img src="Bahan/facebook.png" alt="Facebook">
+                            </a>
+                            <a href="#" class="mr-1">
+                                <img src="Bahan/instagram.png" alt="Instagram">
+                            </a>
+                            <a href="#" class="mr-1">
+                                <img src="Bahan/linkedin.png" alt="LinkedIn">
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-20 ml-20">
+            <p class="text-sm">Copyright © 2023 Jordy Barus. All rights reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        function validateForm() {
+            let name = document.getElementById("fname").value;
+            let email = document.getElementById("email").value;
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+            let gender = document.querySelector('input[name="gender"]:checked');
+            let religion = document.getElementById("religion").value;
+            let address = document.getElementById("address").value;
+            let hobbies = document.querySelectorAll('input[name="hobbies"]:checked');
+
+            if (name === "") {
+                alert("Mohon Isi Kolom Nama");
+                return false;
+            }
+
+            if (email === "") {
+                alert("Mohon Isi Kolom E-mail");
+                return false;
+            } else {
+                let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!email.match(emailPattern)) {
+                    alert("Alamat email tidak valid");
+                    return false;
+                }
+            }
+
+            if (username === "") {
+                alert("Mohon Isi Kolom Username");
+                return false;
+            }
+
+            if (password === "") {
+                alert("Mohon Isi Kolom Password");
+                return false;
+            }
+
+            if (!gender) {
+                alert("Mohon Pilih Jenis Kelamin");
+                return false;
+            }
+
+            if (religion === "") {
+                alert("Mohon Pilih Agama");
+                return false;
+            }
+
+            if (address === "") {
+                alert("Mohon Isi Kolom Alamat");
+                return false;
+            }
+
+            if (hobbies.length === 0) {
+                alert("Mohon Pilih Minimal Satu Hobi");
+                return false;
+            }
+        }
+
+        function togglePassword() {
+            const passwordField = document.getElementById('password');
+            const toggleIcon = document.querySelector('.togglePassword');
+
+            if (passwordField.type === 'password') {
+                passwordField.type = 'text';
+                toggleIcon.textContent = '👁️';
+            } else {
+                passwordField.type = 'password';
+                toggleIcon.textContent = '👁️';
+            }
+        }
+    </script>
+
+</body>
+
+
+</html>
